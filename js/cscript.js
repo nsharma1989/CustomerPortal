@@ -13,6 +13,7 @@ jQuery(function($) {
 		var phone 			= $("form#form1 input[name='phone']").val();
 		var phone_regex		= /^\d{10}$/; // reg ex phone check	
 		var message 		= $("form#form1 input[name='text']").val();
+        var msg_from 		= $("form#form1 input[name='msg_from']").val();
 			
 		/* validation start */	
 		
@@ -55,27 +56,9 @@ jQuery(function($) {
 			return false;
 		}  
         else
-            {
-        validation_holder = 0;
-                submitForm();
-                
-                function submitForm(){
-    $.ajax({
-        type: "POST",
-        url: "email.php",
-        data: "name=" + name + "&email=" + email + "&message=" + message,
-        success : function(text){
-            if (text == "success"){
-                alert(text);
-                formSuccess();
-            }
-        }
-    });
-}
-function formSuccess(){
-    $( "#msgSubmit" ).removeClass( "hidden" );
-}
-        }// else return true
+            { validation_holder = 0;
+             
+            }// else return true
 		/* validation end */	
             }); 	
 }); // jQuery End

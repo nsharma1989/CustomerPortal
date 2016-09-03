@@ -1,14 +1,45 @@
 <article id="article3">
-                    <h2>Halftone Navigation Menu</h2>
+                    <h2>Apply Now</h2>
                     
                     <div class="line"></div>
                     
                     <div class="articleBody clear">
-                    	<figure>
-	                    	<a href="http://tutorialzine.com/2010/01/halftone-navigation-menu-jquery-css/"><img src="http://tutorialzine.com/img/featured/610.jpg" width="620" height="340" /></a>
-                        </figure>
-                        
-                        <p>Today we are making a CSS3 & jQuery halftone-style navigation menu, which will allow you to display animated halftone-style shapes in accordance with the navigation links, and will provide a simple editor for creating additional shapes as well.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus quam quis nibh fringilla sit amet consectetur lectus malesuada. Sed nec libero erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi nisi, rhoncus ut vestibulum ac, sollicitudin quis lorem. Duis felis dui, vulputate nec adipiscing nec, interdum vel tortor. Sed gravida, erat nec rutrum tincidunt, metus mauris imperdiet nunc, et elementum tortor nunc at eros. Donec malesuada congue molestie. Suspendisse potenti. Vestibulum cursus congue sem et feugiat. Morbi quis elit odio. </p>
+                    	  <div id="form-main" align="center">
+                        <div id="form-div">
+                            <form class="form" id="form2" method="post">
+                                <p class="name">
+                                <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" required /><span class="val_fname"></span>
+                                </p>
+                                <input type="hidden" name="msg_from" value="applyNow">
+                                
+                                <p class="email">
+        <input name="email" type="email" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" required /><span class="val_email"></span>
+      </p>
+                <p class="country">
+        <input name="country" type="text" class="validate[required,custom[country]] feedback-input" id="country" placeholder="Country" required /><span class="val_email"></span>
+      </p>
+                <p class="phone">
+        <input name="phone" type="tel" class="validate[required,custom[phone]] feedback-input" id="phone" placeholder="Phone Number" required /><span class="val_email"></span>
+      </p>
+                <p class="phone">
+                    <select name="model" class="validate[required,custom[phone]] feedback-input">
+                    <option>Select Model</option>
+                    <option>Samsung</option>
+                    <option>Blackberry</option>
+                    </select>
+      </p>
+                <p class="text">
+        <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment" required></textarea>
+      </p>
+                                
+                                <div class="submit">
+        <input type="submit" name="Submit" value="APPLY" id="button-blue"/>
+        <div class="ease"></div>
+      </div>
+                            </form>
+                            
+                        </div> 
                     </div>
-                </article>
+                       
+                    </div>
+</article>

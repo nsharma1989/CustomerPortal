@@ -13,7 +13,7 @@ figure{
 body{
 	font-size:14px;
 	color:#fcfcfc;
-	background-color:white;
+	background: -webkit-linear-gradient(top, #fff, #f3f8ff);
 	font-family: "lato",sans-serif;
 }
 
@@ -194,7 +194,6 @@ nav ul li a:hover{
 article{
 	background-color:#4c9cc6;
 	padding:20px 40px;
-    height: 550px;
     width: auto;
 }
 
@@ -307,7 +306,8 @@ textarea {
 }
 
 input:hover, textarea:hover,
-input:focus, textarea:focus {
+input:focus, textarea:focus,
+select:focus, select:hover{
 	background-color:white;
 }
 
@@ -338,6 +338,28 @@ input:focus, textarea:focus {
     display: none;
 }
 
+#article3 #form-div
+{
+    margin: 0 auto;
+    background: none;
+    float: none;
+}
+
+#article3 h2
+{
+    color: white;
+}
+
+#form-div select{
+       height: 40px;
+}
+#form-div select option{
+       padding: 10px;
+}
+#article3{
+    background: url('img/network-bg.png') 100% center no-repeat;
+    background-size: cover;
+}
 
 @media only screen and (max-width: 1099px) {
 	.google-maps{

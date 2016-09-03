@@ -1,26 +1,26 @@
 <?php
-$name=$_POST['name'];
-	$phone=$_POST['phone'];	
-	$email=$_POST['email'];
-$e_message1 ="<html>
+    $name = $_POST['name'];
+	$phone = $_POST['phone'];	
+	$email = $_POST['email'];
+    $msg = $_POST['text'];
+    $msg_from = $_POST['msg_from'];
 
-				<table border=\"0\" cellpadding=\"0\" width=\"700\" cellspacing=\"0\">
+if($msg_from == "contact us")
+{
+    $e_message = "
+    <html>
+    <table border=\"0\" cellpadding=\"0\" width=\"700\" cellspacing=\"0\">
+			<tr><td colspan=\"3\" >
+            <font size=\"+1\" color=\"#666666\"><Strong>Enquiry Recieved</Strong></font>
+            </td></tr>
 				
-				<tr><td colspan=\"3\" ><font size=\"+1\" color=\"#666666\"><Strong>CIDP ENQUIRY RECIEVED</Strong></font></td></tr>
-				
-				<tr>
-				
+				<tr>			
 				<td colspan=\"3\" >&nbsp;</td>
-				
 				</tr>
-				<tr>
-				
-				<td colspan=\"3\" >&nbsp;</td>
-				
-				</tr>
-				
-				<tr><td colspan=\"3\" width=\"150\" ><strong>You Have Recieved an Enquiry,</strong></td></tr>
-				
+				<tr>				
+				<td colspan=\"3\" >&nbsp;</td>				
+				</tr>				
+				<tr><td colspan=\"3\" width=\"150\" ><strong>You Have Recieved an Enquiry,</strong></td></tr>				
 				<tr><td></td><td></td><td>&nbsp;</td></tr>
 				<tr><td width=\"150\" ><strong>Name</strong></td><td >:</td><td >&nbsp;$name</td></tr>
 				
@@ -36,22 +36,70 @@ $e_message1 ="<html>
 				</table>
 				
 				</html>";
+    
+     //Write action to txt log
+    $log  = "Submission: Contact Us".' - '.date("F j, Y, g:i a").PHP_EOL.
+            "User: ".$name.PHP_EOL.
+            "Email: ".$email.PHP_EOL.
+            "-------------------------".PHP_EOL;
+    //
+    
+    file_put_contents('contact.txt', $log, FILE_APPEND);
+
+}
+else
+{
+   $e_message = "
+    <html>
+    <table border=\"0\" cellpadding=\"0\" width=\"700\" cellspacing=\"0\">
+			<tr><td colspan=\"3\" >
+            <font size=\"+1\" color=\"#666666\"><Strong>Application Recieved</Strong></font>
+            </td></tr>
 				
-				$message1 = $e_message1;
-    //$to = "jobs@knowroaming.com";
-    $from1 = "$email"; 
-					
-				$to1 = "ns1910@gmail.com";
+				<tr>			
+				<td colspan=\"3\" >&nbsp;</td>
+				</tr>
+				<tr>				
+				<td colspan=\"3\" >&nbsp;</td>				
+				</tr>				
+				<tr><td colspan=\"3\" width=\"150\" ><strong>You Have Recieved an Application,</strong></td></tr>				
+				<tr><td></td><td></td><td>&nbsp;</td></tr>
+				<tr><td width=\"150\" ><strong>Name</strong></td><td >:</td><td >&nbsp;$name</td></tr>
 				
-				$subject1 ="CIDP - ENQUIRY RECIEVED";				
+				<tr><td><strong>Phone</strong></td><td>:</td><td>&nbsp;$phone</td></tr>
 				
-				$headers1  = "MIME-Version: 1.0" ."\r\n";
+				<tr><td><strong>Email</strong></td><td>:</td><td>&nbsp;$email</td></tr>
+				<tr><td><strong>Message</strong></td><td>:</td><td>&nbsp;$msg</td></tr>
+							
+				<tr><td></td><td></td><td>&nbsp;</td></tr>
+							
+				<tr><td></td><td></td><td>&nbsp;</td></tr>
+						
+				</table>
 				
-				$headers1 .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
+				</html>";
+    
+     //Write action to txt log
+    $log  = "Submission: Apply Now".' - '.date("F j, Y, g:i a").PHP_EOL.
+            "User: ".$name.PHP_EOL.
+            "Email: ".$email.PHP_EOL.
+            "-------------------------".PHP_EOL;
+    //
+    
+    file_put_contents('applynow.txt', $log, FILE_APPEND);
+
+}
 				
-				$headers1 .= "From:$from <$from>"."\r\n";
-				
-				$success = mail($to1,$subject1,$message1,$headers1);
+				$message = $e_message;
+                //$to = "jobs@knowroaming.com";
+                $from = $email; 					
+				$to = "ns1910@gmail.com";				
+				$subject ="CIDP - ENQUIRY RECIEVED";								
+				$headers  = "MIME-Version: 1.0" ."\r\n";				
+				$headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
+                $headers .= "From:$from <$from>"."\r\n";
+				$success = mail($to,$subject,$message,$headers);
+                
 if($success)
 {
     return "success";
@@ -60,6 +108,4 @@ else
 {
     return "Mail not Sent";
 }
-
-
 ?>
