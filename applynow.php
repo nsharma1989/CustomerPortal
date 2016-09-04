@@ -26,6 +26,7 @@
                         <option value="">Select Model</option>
                         <option value="Acer">Acer</option>
                         <option value="Amazon">Amazon</option>
+                        <option value="Acer">Apple</option>
                         <option value="Benq">Benq</option>
                         <option value="Blackberry">Blackberry</option>
                         <option value="Casio">Casio</option>
