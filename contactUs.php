@@ -19,21 +19,23 @@
                         </div>
                         
                     <div id="form-main">
+                        
                         <div id="form-div">
+                            <span>Field marked with * are mandatory</span>
                             <form class="form" id="form1" method="post">
                                 <p class="name">
-                                <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" required /><span class="val_fname"></span>
+                                <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="* Name" id="name" required /><span class="val_fname"></span>
                                 </p>
                                 <input type="hidden" name="msg_from" value="contact">
                                 <p class="phone">
-                                <input name="phone" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Phone" id="phone" required /><span class="val_phone"></span>
+                                <input name="phone" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="* Phone" id="phone" required /><span class="val_phone"></span>
                                 </p>
                                 
                                 <p class="email">
-        <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" required /><span class="val_email"></span>
+        <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="* Email" required /><span class="val_email"></span>
       </p>
                                 <p class="text">
-        <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment" required></textarea>
+        <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment" required></textarea><span class="val_msg"></span>
       </p>
                                 <div class="submit">
         <input type="submit" name="Submit" value="SEND" id="button-blue"/>
@@ -41,11 +43,12 @@
       </div>
                             </form>
                             
-                           <div id="msgSubmit" class="hidden"
- 
-  Your message was sent succssfully! I will be in touch as soon as I can.
-
-</div>
+                           <div id="msgSubmit" class="hidden">
+                            "Thank You for your submission, someone will be in touch with you shortly!”
+                            </div>
+                            <div id="error" class="hidden">
+                               “Sorry! We Could not Process the
+Application at the Time”</div>
                         </div> 
                     </div>
                     </div>

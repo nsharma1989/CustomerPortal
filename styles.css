@@ -338,6 +338,28 @@ select:focus, select:hover{
     display: none;
 }
 
+#msgSubmit{
+    font-size: 20px;
+    font-weight: 600;
+    top: 0px;
+    /* margin: 0 auto; */
+    color: darkslategray;
+    /* background-color: white; */
+    margin-top: inherit;
+}
+
+#success{
+    font-size: 20px;
+    font-weight: 600;
+    top: 0px;
+    /* margin: 0 auto; */
+    color: darkslategray;
+    background-color: white;
+    position: absolute;
+    margin-top: inherit;
+    padding: inherit;
+}
+
 #article3 #form-div
 {
     margin: 0 auto;
@@ -359,6 +381,10 @@ select:focus, select:hover{
 #article3{
     background: url('img/network-bg.png') 100% center no-repeat;
     background-size: cover;
+}
+#article3 span.validate  {
+	color:#F00;
+	display:inline;
 }
 
 @media only screen and (max-width: 1099px) {
