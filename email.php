@@ -20,7 +20,7 @@ if($msg_from == "contact")
     <html>
     <table border=\"0\" cellpadding=\"0\" width=\"700\" cellspacing=\"0\">
 			<tr><td colspan=\"3\" >
-            <font size=\"+1\" color=\"#666666\"><Strong>Enquiry Recieved</Strong></font>
+            <font size=\"+1\" color=\"#1d4961\"><Strong>Enquiry Recieved</Strong></font>
             </td></tr>
 				
 				<tr>			
@@ -70,7 +70,7 @@ else
     <html>
     <table border=\"0\" cellpadding=\"0\" width=\"700\" cellspacing=\"0\">
 			<tr><td colspan=\"3\" >
-            <font size=\"+1\" color=\"#666666\"><Strong>Application Recieved</Strong></font>
+            <font size=\"+1\" color=\"#1d4961\"><Strong>Application Recieved</Strong></font>
             </td></tr>
 				
 				<tr>			
