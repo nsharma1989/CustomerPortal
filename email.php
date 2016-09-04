@@ -1,9 +1,17 @@
 <?php
     $msg_from = $_POST['msg_from'];
+    $name = mysql_real_escape_string($_POST['name']);
+
+if(strpos($name,'cei')!== FALSE){
+    echo "fail";
+    //die;
+}
+else
+{
 
 if($msg_from == "contact")
 {
-    $name = mysql_real_escape_string($_POST['name']);
+    
 	$phone = mysql_real_escape_string($_POST['phone']);	
 	$email = mysql_real_escape_string($_POST['email']);
     $msg = mysql_real_escape_string($_POST['message']);
@@ -51,7 +59,6 @@ if($msg_from == "contact")
 }
 else
 {
-    $name = mysql_real_escape_string($_POST['name']);
 	$phone = mysql_real_escape_string($_POST['phone']);	
 	$email = mysql_real_escape_string($_POST['email']);
     $address = mysql_real_escape_string($_POST['address']);
@@ -123,5 +130,6 @@ if($success)
 else
 {
     echo "fail";
+}
 }
 ?>

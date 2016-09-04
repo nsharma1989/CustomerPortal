@@ -187,7 +187,7 @@ jQuery(function($) {
                     url: "email.php",
                     data: "name=" + name + "&email=" + email + "&address=" + address + "&phone=" + phone + "&msg_from=" + msg_from + "&model=" + model + "&country=" + country,
                     success : function(data){
-                        alert(data);
+                        //alert(data);
                         if(data == "success")
                             {
                                 $('#form2').fadeTo( "slow", 0.15, function() {
