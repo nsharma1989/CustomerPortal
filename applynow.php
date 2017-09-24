@@ -21,6 +21,8 @@
                 <p class="phone">
         <input name="phone" type="tel" class="validate[required,custom[phone]] feedback-input" id="phone" placeholder="Phone Number" required /><span class="phone_val"></span>
       </p>
+                              
+                              //comments
                 <p class="phone">
                     <select name="model" class="validate[required,custom[phone]] feedback-input" required>
                         <option value="">Select Model</option>
